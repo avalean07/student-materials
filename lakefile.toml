@@ -1,0 +1,10 @@
+name = "FP-2025"
+version = "0.1.0"
+defaultTargets = ["FunctionalProgramming"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+
+[[lean_lib]]
+name = "FunctionalProgramming"
