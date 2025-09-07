@@ -1,1 +1,2 @@
+import FunctionalProgramming.Lecture01
 import FunctionalProgramming.Tutorial01

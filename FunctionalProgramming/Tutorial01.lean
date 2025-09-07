@@ -1,9 +1,11 @@
 import LeanSearchClient.Basic
 import Mathlib.Tactic.Linarith
 
+namespace Tutorial01
+
 -- The following exercises are from https://leanprover.github.io/theorem_proving_in_lean4/Propositions-and-Proofs/#propositions-and-proofs
 
-namespace Propositional
+section
 variable (p q r : Prop)
 
 -- commutativity of ∧ and ∨
@@ -30,11 +32,11 @@ example : (¬p ∨ q) → (p → q) := sorry
 example : p ∨ False ↔ p := sorry
 example : p ∧ False ↔ False := sorry
 example : (p → q) → (¬q → ¬p) := sorry
-end Propositional
+end
 
 -- The following exercises are from https://leanprover.github.io/theorem_proving_in_lean4/Quantifiers-and-Equality/#quantifiers-and-equality
 
-namespace Predicate
+section
 variable (α : Type) (p q : α → Prop)
 variable (r : Prop)
 
@@ -45,7 +47,7 @@ example : (∀ x, p x) ∨ (∀ x, q x) → ∀ x, p x ∨ q x := sorry
 example : α → ((∀ x : α, r) ↔ r) := sorry
 example : (∀ x, p x ∨ r) ↔ (∀ x, p x) ∨ r := sorry
 example : (∀ x, r → p x) ↔ (r → ∀ x, p x) := sorry
-end Predicate
+end
 
 -- Let's define `and` and `or` functions ourselves and
 -- show that they behave as expected.
@@ -55,3 +57,5 @@ def myOr : Bool -> Bool -> Bool := sorry
 
 example (b1 b2 : Bool) : myAnd b1 b2 = true ↔ b1 = true ∧ b2 = true := sorry
 example (b1 b2 : Bool) : myOr b1 b2 = true ↔ b1 = true ∨ b2 = true := sorry
+
+end Tutorial01
