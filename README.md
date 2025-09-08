@@ -23,5 +23,15 @@ Materials:
 Overview of lectures:
 1. Introduction to Lean.
 
+**Important information about the homework:** due to a bug in GitHub Classroom,
+the first invite link you will receive for the homework repository is usually broken.
+Clicking the classroom link below will create your repository, but you will
+need to wait for a new invite link before you have full access.  I will send
+these links twice a day, please be patient.  In the meantime, you should be able
+to still see your repository in the [cub-fp-2025 organisation](https://github.com/cub-fp-2025).
+
+Please reach out to me if you have created a repository using the link below,
+and haven't received a new invite link after 24 hours.  
+
 Homework links:
-1. TBA
+1. https://classroom.github.com/a/QHKUQ38i
