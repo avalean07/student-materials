@@ -26,4 +26,4 @@ Overview of lectures:
 
 Homework links:
 1. https://classroom.github.com/a/QHKUQ38i
-2. https://classroom.github.com/a/24wWmmb_
+2. [https://classroom.github.com/a/24wWmmb_](https://classroom.github.com/a/24wWmmb_)
