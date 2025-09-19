@@ -30,6 +30,7 @@ def userIndToStr' : UserInd → UserStr
 
 abbrev UserId := Nat
 abbrev SeriesId := Nat
+abbrev Day := Nat
 
 inductive Billing where
   | per_ten_days
@@ -55,6 +56,7 @@ structure View where
   user_id : UserId
   series_id : SeriesId
   episode : Nat
+  day : Day
 
 structure Database where
   users : Std.HashMap UserId User
@@ -64,7 +66,7 @@ structure Database where
 def lecture_db : Database := {
   users := Std.HashMap.ofList [⟨0, ⟨"Alice"⟩⟩, ⟨1, ⟨"Bob"⟩⟩],
   series := [pokemon, good_omens],
-  views := [⟨0, 100, 0⟩, ⟨1, 100, 5⟩, ⟨1, 200, 5⟩, ⟨0, 100, 1⟩, ⟨0, 100, 2⟩]
+  views := [⟨0, 100, 0, 0⟩, ⟨1, 100, 5, 3⟩, ⟨1, 200, 5, 3⟩, ⟨0, 100, 1, 5⟩, ⟨0, 100, 2, 10⟩]
 }
 where
   pokemon : Series := ⟨ 100, "Pokemon", 1000 ⟩
