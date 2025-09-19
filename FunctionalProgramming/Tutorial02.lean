@@ -1,7 +1,6 @@
-import LeanSearchClient.Basic
 import Mathlib.Tactic.Linarith
 
-namespace Tutorial02
+namespace Week02
 
 -- These are pairs of very similar statements.
 -- In each case, one statement is easy to prove, while the other requires induction.
@@ -43,4 +42,4 @@ example (n k : ℕ) (xs : List α) : drop k (drop n xs) = drop n (drop k xs) := 
 -- functions for it: size, reverse, minimum, flatten.
 -- Prove similar properties for trees.
 
-end Tutorial02
+end Week02

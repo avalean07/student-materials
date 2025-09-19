@@ -1,2 +1,6 @@
 import FunctionalProgramming.Lecture01
+import FunctionalProgramming.Lecture02
+import FunctionalProgramming.Lecture03
 import FunctionalProgramming.Tutorial01
+import FunctionalProgramming.Tutorial02
+import FunctionalProgramming.Tutorial03

@@ -1,7 +1,6 @@
-import LeanSearchClient.Basic
 import Mathlib.Tactic.Linarith
 
-namespace Tutorial01
+namespace Week01
 
 -- The following exercises are from https://leanprover.github.io/theorem_proving_in_lean4/Propositions-and-Proofs/#propositions-and-proofs
 
@@ -58,4 +57,4 @@ def myOr : Bool -> Bool -> Bool := sorry
 example (b1 b2 : Bool) : myAnd b1 b2 = true ↔ b1 = true ∧ b2 = true := sorry
 example (b1 b2 : Bool) : myOr b1 b2 = true ↔ b1 = true ∨ b2 = true := sorry
 
-end Tutorial01
+end Week01

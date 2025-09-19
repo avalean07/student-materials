@@ -1,7 +1,6 @@
-import LeanSearchClient.Basic
 import Mathlib.Tactic.Linarith
 
-namespace Lecture02
+namespace Week02
 
 -- Turnstile, function types
 
@@ -119,4 +118,4 @@ example (bt : BinTree α) : bt.depth ≤ bt.size := by
   | leaf _ =>
       simp [BinTree.depth, BinTree.size]
 
-end Lecture02
+end Week02

@@ -1,7 +1,6 @@
-import LeanSearchClient
 import Mathlib.Tactic.Linarith
 
-namespace Lecture01
+namespace Week01
 
 /-
 # Computations in the IDE
@@ -141,4 +140,4 @@ example : ∀ (n : Nat), ∃ (k : Nat), n ≤ k := by
   exists n + 1
   linarith
 
-end Lecture01
+end Week01
