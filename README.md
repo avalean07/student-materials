@@ -46,6 +46,7 @@ in by 9:30 on Fridays (15 minutes before the lecture starts).
 Your homework and exam contribute 50% of your grade each.
 You need at least 45% on both to pass.
 
+There is one homework assignment per lecture.
 The homework submission is organised via GitHub Classroom,
 see below.
 
@@ -64,6 +65,7 @@ Overview of lectures:
 1. Introduction to Lean.
 2. Function types and inductive types
 3. Programming in a functional style (no slides)
+4. Typeclasses
 
 Homework links:
 1. [https://classroom.github.com/a/QHKUQ38i](https://classroom.github.com/a/QHKUQ38i)
