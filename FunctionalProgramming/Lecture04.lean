@@ -135,7 +135,7 @@ def f : True ∨ True → ℕ
 #check 0 = 1
 set_option pp.notation false
 #check if 0 = 1 then 3 else 5
-set_option pp.notation true
+set_option pp.notation true 
 #print ite
 
 #check if 0 == 1 then 3 else 5
