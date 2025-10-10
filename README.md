@@ -47,8 +47,9 @@ Your homework and exam contribute 50% of your grade each.
 You need at least 45% on both to pass.
 
 There is one homework assignment per lecture.
-The homework submission is organised via GitHub Classroom,
-see below.
+The homework submission is organised via GitHub Classroom.
+Starting from HW4, use the link on LMS to get your homework
+repository.
 
 There are no individual extensions, replacement exercises,
 or anything else of the sort possible for the homework.
@@ -66,11 +67,6 @@ Overview of lectures:
 2. Function types and inductive types
 3. Programming in a functional style (no slides)
 4. Typeclasses
-
-Homework links:
-1. [https://classroom.github.com/a/QHKUQ38i](https://classroom.github.com/a/QHKUQ38i)
-2. [https://classroom.github.com/a/24wWmmb_](https://classroom.github.com/a/24wWmmb_)
-3. [https://classroom.github.com/a/j-GTRfjs](https://classroom.github.com/a/j-GTRfjs)
 
 Homework solutions are available in this GitHub
 organisation soon after the deadline, look for the repo hwNN

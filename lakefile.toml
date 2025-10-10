@@ -9,3 +9,7 @@ rev = "v4.22.0"
 
 [[lean_lib]]
 name = "FunctionalProgramming"
+
+[[lean_exe]]
+name = "lecture04"
+root = "Main"
