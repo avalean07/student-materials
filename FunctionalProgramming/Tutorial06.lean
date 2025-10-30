@@ -143,7 +143,7 @@ theorem contains_finds_if_present
 
 -- Exercise: prove this
 theorem present_if_contains_finds
-    (a : α) (t : BinTree α) (tv : BST t)
+    (a : α) (t : BinTree α)
     : t.contains a = true → a ∈ t := by sorry
 
 
