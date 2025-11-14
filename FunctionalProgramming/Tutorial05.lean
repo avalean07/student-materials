@@ -1,5 +1,7 @@
 import Mathlib.Tactic.Linarith
 
+namespace Week05
+
 -- Exercises to practice with.
 -- 1. Add support for some more operators: and, or, not, div, mod.
 -- 2. Implement some programs in this language, for example:
@@ -194,3 +196,5 @@ def program: Stmt := [
 ]
 def prog_action : IO (Option (Unit × Env)) := program.eval ∅
 #eval prog_action
+
+end Week05

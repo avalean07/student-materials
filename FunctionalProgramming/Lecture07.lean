@@ -1,4 +1,5 @@
 import Mathlib.Tactic.Linarith
+import FunctionalProgramming.Direction
 import FunctionalProgramming.WithBounds
 
 --
@@ -68,7 +69,7 @@ def RBTree.size : RBTree α c k → ℕ
 --   Reassemble tree from the parts we "cut off"
 --
 
-inductive Direction where | left | right
+-- inductive Direction where | left | right
 
 def BinTree.find_insertion_ancestry (ai : α) : BinTree α → List (α × Direction × BinTree α) → Option (List (α × Direction × BinTree α))
   | .leaf, acc => some acc
@@ -103,6 +104,7 @@ def emptyTree : BinTree ℕ := .leaf
 -- Insertion into red-black trees.
 --
 
+namespace Try1
 -- We build the ancestry up top-to-bottom.
 -- At each point, we have one node "missing" from the tree.
 -- Initially, this is the whole tree missing (`.root`); when we add nodes, we build up the structure
@@ -128,6 +130,8 @@ def Ancestry.color_expected_node_black : Ancestry α .red k h → Ancestry α .b
 inductive InsertionPoint (α : Type) (h : ℕ) where
   | insert_at : Ancestry α c 0 h → InsertionPoint α h
   | already_present : InsertionPoint α h
+end Try1
+open Try1
 
 mutual
   def RBTree.find_black_node_insertion_point (anc : Ancestry α .black k h) (ai : α) :

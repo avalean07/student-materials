@@ -1,5 +1,7 @@
 import Mathlib.Tactic.Linarith
 
+namespace Week06
+
 --
 -- The main types we work with
 --
@@ -152,3 +154,5 @@ theorem present_if_contains_finds
 instance : ValidElemType ℕ where
   compare_eq_correct := sorry
   beq_correct := sorry
+
+end Week06

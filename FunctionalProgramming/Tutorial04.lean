@@ -1,5 +1,6 @@
 import Mathlib.Tactic.Linarith
 
+namespace Week04
 -- Take the following structure:
 structure Vec2D where
   x : ℕ
@@ -42,3 +43,5 @@ def runWhile (cond : MyState σ Bool) (body : MyState σ Unit) : MyState σ Unit
 
 -- Use do notation and the MyState monad instance to compute the
 -- Fibonacci numbers imperatively.
+
+end Week04
