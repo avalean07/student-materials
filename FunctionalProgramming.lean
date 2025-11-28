@@ -7,6 +7,7 @@ import FunctionalProgramming.Lecture06
 import FunctionalProgramming.Lecture07
 import FunctionalProgramming.Lecture08
 import FunctionalProgramming.Lecture09
+import FunctionalProgramming.Lecture10
 import FunctionalProgramming.Tutorial01
 import FunctionalProgramming.Tutorial02
 import FunctionalProgramming.Tutorial03
@@ -16,3 +17,6 @@ import FunctionalProgramming.Tutorial06
 import FunctionalProgramming.Tutorial07
 import FunctionalProgramming.Tutorial08
 import FunctionalProgramming.Tutorial09
+import FunctionalProgramming.Tutorial10
+import FunctionalProgramming.GradingScheme
+import FunctionalProgramming.MockExam

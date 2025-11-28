@@ -3,6 +3,8 @@ import Mathlib.Logic.Relation
 import Std.Data.HashMap.Basic
 import Std.Data.HashMap.Lemmas
 
+namespace Lecture09
+
 inductive Exp where
   | const (n : ℕ)
   | var (x : String)
@@ -77,7 +79,7 @@ example : Steps ex_V
           constructor
           rfl
 
-section end
+end
 
 lemma eval_eq_under_step
     : Step V e₁ e₂ → e₁.eval V = e₂.eval V := by
@@ -85,7 +87,7 @@ lemma eval_eq_under_step
 
 theorem eval_eq_some_of_steps (V : Env)
     : Steps V e (.const n) → e.eval V = some n := by
-  generalize result_eq : (const n) = result
+  generalize result_eq : (Exp.const n) = result
   intro steps
   induction steps <;> cases result_eq
   · simp
@@ -95,24 +97,24 @@ theorem eval_eq_some_of_steps (V : Env)
     assumption
 
 lemma lhs_eval_eq_some_of_eval_eq_some
-    : (add lhs rhs).eval V = some n → ∃ kl, lhs.eval V = some kl := by
+    : (Exp.add lhs rhs).eval V = some n → ∃ kl, lhs.eval V = some kl := by
   intro eval_eq
   cases lhs_eval_eq : lhs.eval V
-  case none => simp [eval, lhs_eval_eq] at eval_eq
+  case none => simp [Exp.eval, lhs_eval_eq] at eval_eq
   case some k => exists k
 
 lemma rhs_eval_eq_some_of_eval_eq_some
-    : (add lhs rhs).eval V = some n → ∃ kr, rhs.eval V = some kr := by
+    : (Exp.add lhs rhs).eval V = some n → ∃ kr, rhs.eval V = some kr := by
   intro eval_eq
   cases rhs_eval_eq : rhs.eval V
-  case none => simp [eval, rhs_eval_eq] at eval_eq
+  case none => simp [Exp.eval, rhs_eval_eq] at eval_eq
   case some k => exists k
 
 theorem steps_of_eval_eq_some (V : Env)
     : e.eval V = some n → Steps V e (.const n) := by
   intro eval_eq
   induction e generalizing n
-  · simp only [eval] at eval_eq
+  · simp only [Exp.eval] at eval_eq
     cases eval_eq
     constructor
   · apply Steps.single
@@ -121,13 +123,13 @@ theorem steps_of_eval_eq_some (V : Env)
   · have ⟨ kl, lsteps ⟩ := lhs_eval_eq_some_of_eval_eq_some eval_eq
     have ⟨ kr, rsteps ⟩ := rhs_eval_eq_some_of_eval_eq_some eval_eq
     rename_i lhs rhs lIH rIH
-    calc Steps V _ (add (.const kl) rhs) := by
+    calc Steps V _ (Exp.add (.const kl) rhs) := by
             apply_rules [add_left_of_steps, lIH]
-         Steps V _ (add (.const kl) (.const kr)) := by
+         Steps V _ (Exp.add (.const kl) (.const kr)) := by
             apply_rules [add_right_of_steps, rIH]
          Step V _ _ := by
             constructor
-            simp [eval, lsteps, rsteps] at eval_eq
+            simp [Exp.eval, lsteps, rsteps] at eval_eq
             rw [eval_eq]
 
 inductive OnlyVars (vars : List String) : Exp → Prop where
@@ -158,13 +160,13 @@ theorem progress
     rename_i lvs rvs
     rcases lIH lvs with (⟨kl, rfl⟩ | ⟨ lhs', lsteps⟩)
     · rcases rIH rvs with (⟨kr, rfl⟩ | ⟨ rhs', rsteps⟩)
-      · exists const (kl + kr)
+      · exists .const (kl + kr)
         constructor
         rfl
-      · exists add (const kl) rhs'
+      · exists .add (.const kl) rhs'
         constructor
         assumption
-    · exists add lhs' rhs
+    · exists .add lhs' rhs
       constructor
       assumption
 
@@ -197,3 +199,5 @@ theorem totality
   · sorry
   · sorry
   · sorry
+
+end Lecture09

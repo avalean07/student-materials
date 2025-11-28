@@ -1,6 +1,8 @@
 import Mathlib.Data.Nat.Notation
 import Std.Data.HashMap
 
+namespace Lecture10
+
 -- x      variable use
 -- e₁ e₂  function application
 -- λx. e  anonymous functions
@@ -163,3 +165,5 @@ example : Steps (.binOp .add (.const 2) (.const 2)) (.value (Value.nat 4)) := by
     apply HeadStep.bin_op_step
     apply BinOpStep.add_step
   apply RTC.trivial
+
+end Lecture10
