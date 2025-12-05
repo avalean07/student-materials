@@ -8,6 +8,7 @@ import FunctionalProgramming.Lecture07
 import FunctionalProgramming.Lecture08
 import FunctionalProgramming.Lecture09
 import FunctionalProgramming.Lecture10
+import FunctionalProgramming.Lecture11
 import FunctionalProgramming.Tutorial01
 import FunctionalProgramming.Tutorial02
 import FunctionalProgramming.Tutorial03
